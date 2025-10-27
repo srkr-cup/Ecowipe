@@ -2,20 +2,22 @@
   "name": "ecowipe",
   "version": "1.0.0",
   "description": "",
+  "homepage": "https://srkr-cup.github.io/Ecowipe",
   "main": "index.js",
   "scripts": {
-    "start": "craco start",
-    "server": "nodemon server/server.js",
-    "dev": "concurrently \"npm run server\" \"npm start\"",
+    "start": "set PORT=3000 && craco start",
+    "server": "set PORT=5001 && nodemon server/server.js",
+    "dev": "concurrently \"npm run server\" \"npm run start\"",
     "build": "craco build",
     "test": "craco test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@craco/craco": "^5.9.0",
     "@radix-ui/react-dialog": "^1.1.15",
     "@radix-ui/react-slot": "^1.2.3",
     "class-variance-authority": "^0.7.1",
@@ -32,7 +34,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-router-dom": "^7.9.1",
-    "react-scripts": "^0.0.0",
+    "react-scripts": "^5.0.1",
     "tailwind-merge": "^3.3.1",
     "tesseract.js": "^6.0.1"
   },
@@ -49,8 +51,13 @@
     ]
   },
   "devDependencies": {
+    "@babel/eslint-parser": "^7.28.5",
+    "@craco/craco": "^7.1.0",
     "autoprefixer": "^10.4.16",
     "concurrently": "^9.2.1",
+    "eslint-loader": "^4.0.2",
+    "eslint-webpack-plugin": "^5.0.2",
+    "gh-pages": "^6.3.0",
     "nodemon": "^3.1.10",
     "postcss": "^8.4.31",
     "tailwindcss": "^3.3.0"
