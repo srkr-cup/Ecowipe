@@ -1,0 +1,77 @@
+{
+  "name": "WipeRecord",
+  "type": "object",
+  "properties": {
+    "user_name": {
+      "type": "string",
+      "description": "Full name of the user who performed the wipe"
+    },
+    "device_type": {
+      "type": "string",
+      "enum": [
+        "mobile",
+        "laptop",
+        "usb",
+        "hdd",
+        "ssd"
+      ],
+      "description": "Type of device being wiped"
+    },
+    "operating_system": {
+      "type": "string",
+      "enum": [
+        "windows",
+        "linux",
+        "ubuntu",
+        "android"
+      ],
+      "description": "Operating system of the device"
+    },
+    "wipe_method": {
+      "type": "string",
+      "enum": [
+        "quick",
+        "deep",
+        "military"
+      ],
+      "description": "Intensity level of the wipe"
+    },
+    "wipe_command": {
+      "type": "string",
+      "description": "Generated command for wiping"
+    },
+    "proof_screenshot_url": {
+      "type": "string",
+      "description": "URL of the uploaded proof screenshot"
+    },
+    "certificate_url": {
+      "type": "string",
+      "description": "URL of the generated certificate"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending_proof",
+        "completed",
+        "failed"
+      ],
+      "default": "pending_proof",
+      "description": "Current status of the wipe process"
+    },
+    "eco_points": {
+      "type": "number",
+      "default": 0,
+      "description": "Eco points earned for this wipe"
+    },
+    "device_size_gb": {
+      "type": "number",
+      "description": "Size of device wiped in GB"
+    }
+  },
+  "required": [
+    "device_type",
+    "operating_system",
+    "wipe_method",
+    "wipe_command"
+  ]
+}

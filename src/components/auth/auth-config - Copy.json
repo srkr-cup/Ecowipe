@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "states": {
+    "SIGN_IN": {
+      "fields": ["email", "password"],
+      "title": "Sign in to continue",
+      "button": "Sign in",
+      "toggle": "Need an account? Sign up"
+    },
+    "SIGN_UP": {
+      "fields": ["fullName", "email", "password", "confirmPassword"],
+      "title": "Create your account",
+      "button": "Create Account",
+      "toggle": "Already have an account? Sign in"
+    }
+  },
+  "transitions": {
+    "duration": 0.3,
+    "enter": {
+      "opacity": [0, 1],
+      "x": [20, 0]
+    },
+    "exit": {
+      "opacity": [1, 0],
+      "x": [0, -20]
+    }
+  }
+}
