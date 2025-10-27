@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Ecowipe/static/css/main.1b9c17c1.css",
+    "main.js": "/Ecowipe/static/js/main.2b0d1e6b.js",
+    "index.html": "/Ecowipe/index.html",
+    "main.1b9c17c1.css.map": "/Ecowipe/static/css/main.1b9c17c1.css.map",
+    "main.2b0d1e6b.js.map": "/Ecowipe/static/js/main.2b0d1e6b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1b9c17c1.css",
+    "static/js/main.2b0d1e6b.js"
+  ]
+}
